@@ -1,0 +1,15 @@
+[theme]
+# The main accent color (buttons, sliders, highlighted text)
+primaryColor = "#FF8DA1" 
+
+# The main background color (iOS apps usually use pure white or slightly off-white)
+backgroundColor = "#FFFFFF" 
+
+# The background for the sidebar and flashcard boxes (a very soft blush pink)
+secondaryBackgroundColor = "#FFF0F5" 
+
+# The text color (dark charcoal is softer and easier to read than pure black)
+textColor = "#333333" 
+
+# Clean, modern font that looks native to Apple devices
+font = "sans serif"
