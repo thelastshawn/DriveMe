@@ -1,22 +1,50 @@
 import streamlit as st
+import datetime
 
+# --- PAGE CONFIG ---
 st.set_page_config(page_title="DriveMe: CA DMV Prep", page_icon="🚗", layout="centered")
 
+# --- HEADER SECTION ---
 st.title("🚗 Welcome to DriveMe!")
 st.subheader("Your personal California DMV Permit study buddy.")
+st.write("I built this app specifically to help you ace your permit test and get on the road in San Diego! 🌴")
 
-st.write("I built this app specifically to help you ace your permit test and get on the road in San Diego! Here is a quick breakdown of how to use it:")
+st.divider()
 
-st.markdown("""
-* **📖 Study Guide:** Start here. It covers all the core rules, new 2026 laws, speed limits, and right-of-way concepts you need to know.
-* **📇 Flashcards:** Once you've read the guide, use these quick-fire cards to test your memory on the most common questions.
-* **📝 Practice Exam:** Take a randomized 10-question practice test. You need an 83% to pass the real thing, so keep practicing until you hit that mark consistently!
-* **📺 Video Practice:** Sit back and watch a breakdown of essential exam questions to get used to the tricky wording.
-""")
+# --- DASHBOARD CARDS ---
+st.write("### 📍 Your Study Dashboard")
+st.write("Use the sidebar menu to navigate to these sections when you're ready:")
 
-st.write("---")
-st.success("You've got this! Take your time, review the materials, and you'll be holding that permit in no time. 🚙💨")
+# Create a 2x2 grid using columns
+col1, col2 = st.columns(2)
 
+with col1:
+    st.info("#### 📖 Study Guide\nStart here! Review the core California rules, speed limits, and new 2026 laws.")
+    st.warning("#### 📇 Flashcards\nQuick-fire memory test. Flip the cards to memorize the most common questions.")
 
+with col2:
+    st.success("#### 📝 Practice Exam\nTake a randomized 10-question test. Aim for 83% or higher to pass!")
+    st.error("#### 📺 Video Practice\nSit back, relax, and watch real DMV questions being answered and explained.")
 
+st.divider()
 
+# --- COUNTDOWN WIDGET ---
+st.write("### 🎯 Test Day Tracker")
+st.write("Set your DMV appointment date below to start the countdown!")
+
+# Interactive calendar widget
+test_date = st.date_input("When is your permit test?", value=None)
+
+if test_date:
+    today = datetime.date.today()
+    days_left = (test_date - today).days
+    
+    if days_left > 0:
+        # Streamlit's metric widget looks very sleek and professional
+        st.metric(label="Days until test day!", value=days_left)
+        st.write("You've got this! Just take it one study session at a time.")
+    elif days_left == 0:
+        st.balloons()
+        st.success("Today is the day! Take a deep breath. You are going to do great! 🚙💨")
+    else:
+        st.write("Test day has passed! Hopefully, you're officially holding that permit! 🎉")
