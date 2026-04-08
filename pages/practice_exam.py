@@ -4,8 +4,6 @@ import random
 st.title("📝 Practice Exam")
 st.write("Let's test your knowledge! The test will generate a random set of questions each time.")
 
-# --- THE MASTER QUESTION BANK ---
-# Add ALL of your questions here. The app will randomly select from this list.
 QUESTION_BANK = [
     {
         "q": "When you park facing downhill on a street with a curb, turn your wheels:",
@@ -54,25 +52,61 @@ QUESTION_BANK = [
         "options": ["Fog lights only", "High beams", "Low beams"],
         "answer": "Low beams",
         "explanation": "High beams will reflect off the fog and impair your visibility. Always use low beams."
+    },
+    {
+        "q": "When you see a school bus stopped with flashing red lights, you must:",
+        "options": ["Slow down and pass carefully", "Stop until the lights stop flashing", "Honk to warn the children"],
+        "answer": "Stop until the lights stop flashing",
+        "explanation": "You must stop from either direction until children are safely across and lights stop flashing, unless on a divided highway."
+    },
+    {
+        "q": "If you are involved in a collision resulting in $1,000+ in damage, you must report it to the DMV within:",
+        "options": ["5 days", "10 days", "30 days"],
+        "answer": "10 days",
+        "explanation": "You have 10 days to file a Report of Traffic Accident Occurring in California (SR 1) to the DMV."
+    },
+    {
+        "q": "Which of these is a safe driving practice?",
+        "options": ["Staring right in front of your car", "Keeping your eyes moving to scan surroundings", "Using high beams in rain"],
+        "answer": "Keeping your eyes moving to scan surroundings",
+        "explanation": "Scanning ahead and checking mirrors keeps you aware of hazards."
+    },
+    {
+        "q": "You are approaching a railroad crossing with no warning devices and cannot see 400 feet down the tracks. The speed limit is:",
+        "options": ["15 mph", "25 mph", "35 mph"],
+        "answer": "15 mph",
+        "explanation": "This is a blind railroad crossing, requiring a speed of 15 mph to stop safely if needed."
+    },
+    {
+        "q": "Who can legally park next to a curb painted blue?",
+        "options": ["Anyone dropping off passengers", "Disabled persons with a special placard or plate", "Anyone staying for less than 15 minutes"],
+        "answer": "Disabled persons with a special placard or plate",
+        "explanation": "Blue curbs are strictly reserved for those with valid disabled placards or license plates."
+    },
+    {
+        "q": "Center turn lanes are marked by:",
+        "options": ["Solid yellow lines on both sides", "Broken white lines", "Inner broken yellow lines and outer solid yellow lines"],
+        "answer": "Inner broken yellow lines and outer solid yellow lines",
+        "explanation": "The center left turn lane is designated by parallel solid and broken yellow lines."
+    },
+    {
+        "q": "When an emergency vehicle with a siren and flashing lights approaches, you must:",
+        "options": ["Speed up to get out of the way", "Pull to the right edge of the road and stop", "Stop immediately in your lane"],
+        "answer": "Pull to the right edge of the road and stop",
+        "explanation": "Always pull over to the right and stop to clear the way for emergency vehicles."
     }
 ]
 
-# --- EXAM SETUP & RANDOMIZATION ---
-# Set how many questions you want per test. Change this to 46 when you have enough questions!
-NUM_QUESTIONS_PER_TEST = 5 
+NUM_QUESTIONS_PER_TEST = 10 
 
-# We use session_state so the questions don't randomly change every time she clicks a button
 if 'current_test' not in st.session_state:
-    # Randomly select a batch of questions from the master bank
     st.session_state.current_test = random.sample(QUESTION_BANK, NUM_QUESTIONS_PER_TEST)
     st.session_state.exam_submitted = False
     st.session_state.user_answers = {}
 
-# --- RENDER THE EXAM ---
 if not st.session_state.exam_submitted:
     for i, q_data in enumerate(st.session_state.current_test):
         st.write(f"**{i + 1}. {q_data['q']}**")
-        # Save answers to session state as they click
         st.session_state.user_answers[i] = st.radio(
             f"Options for Q{i}", 
             q_data['options'], 
@@ -86,13 +120,11 @@ if not st.session_state.exam_submitted:
         st.session_state.exam_submitted = True
         st.rerun()
 
-# --- GRADING AND REVIEW SCREEN ---
 else:
     st.header("📊 Exam Results")
     score = 0
     wrong_answers = []
 
-    # Calculate score and gather wrong answers
     for i, q_data in enumerate(st.session_state.current_test):
         user_ans = st.session_state.user_answers.get(i)
         if user_ans == q_data['answer']:
@@ -105,7 +137,6 @@ else:
                 "explanation": q_data['explanation']
             })
 
-    # Display final score
     percentage = (score / NUM_QUESTIONS_PER_TEST) * 100
     st.subheader(f"Final Score: {score} / {NUM_QUESTIONS_PER_TEST} ({percentage:.0f}%)")
     
@@ -115,7 +146,6 @@ else:
     else:
         st.error("Keep studying! You need at least an 83% to pass the real exam.")
 
-    # Show review of wrong answers
     if len(wrong_answers) > 0:
         st.write("### 🛑 Let's review what you missed:")
         for idx, wrong in enumerate(wrong_answers):
@@ -125,11 +155,9 @@ else:
                 st.write(f"✅ **Correct answer:** {wrong['correct_ans']}")
                 st.info(f"**Why:** {wrong['explanation']}")
 
-    # Retake button resets the session state to generate a new test
     st.write("---")
     if st.button("🔄 Retake Exam with New Questions"):
         st.session_state.current_test = random.sample(QUESTION_BANK, NUM_QUESTIONS_PER_TEST)
         st.session_state.exam_submitted = False
         st.session_state.user_answers = {}
         st.rerun()
-
