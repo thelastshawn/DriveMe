@@ -1,10 +1,27 @@
 import streamlit as st
 
-st.title("📺 Video Practice")
-st.write("Sometimes it helps to just sit back and watch! This video walks through essential 2026 California DMV exam questions to help you get comfortable with the tricky wording they use on the real test.")
+st.title("📺 Video Walkthroughs")
+st.write("Sometimes it helps to actually *see* the rules in action. Watch these driving instructors break down the California exam and explain the most common mistakes.")
 
-# This single line embeds the YouTube video directly into the app!
-st.video("https://www.youtube.com/watch?v=ImIuKT7zcW8")
+st.divider()
 
-st.write("---")
-st.info("💡 **Pro Tip:** Try pausing the video right after they read the question to see if you can guess the answer before they reveal it!")
+st.subheader("1. The Most Common CA DMV Mistakes")
+st.write("Examiners in California are incredibly strict about these specific habits. Watch out for them!")
+# Streamlit's native video player - loads perfectly on mobile!
+st.video("https://www.youtube.com/watch?v=s1RzIEG5DQQ") 
+
+st.divider()
+
+st.subheader("2. How to Perfectly Check Your Blind Spots")
+st.write("Remember the daily tip: Examiners watch your head, not your eyes!")
+st.video("https://www.youtube.com/watch?v=Fj-E_w2kX3Q")
+
+st.divider()
+
+st.subheader("3. Right-of-Way Rules Explained")
+st.write("A quick visual breakdown of who goes first at 4-way stops and intersections.")
+st.video("https://www.youtube.com/watch?v=eJt3k1F9n0M")
+
+st.divider()
+
+st.info("💡 **Pro Tip:** Whenever you find a helpful YouTube video or Short, just paste the link into the code to update your feed!")
