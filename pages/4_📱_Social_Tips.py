@@ -2,29 +2,33 @@ import streamlit as st
 import streamlit.components.v1 as components
 
 st.title("📱 The Social Feed")
-st.write("Stay in the loop with real-world tips, trick questions, and advice from San Diego locals and driving instructors across social media.")
+st.write("Real-world tips, tricks, and relatable DMV struggles straight from the timeline.")
 
 st.divider()
 
-st.subheader("🎵 TikTok Advice")
-st.write("Watch driving instructors explain common mistakes on the California test.")
+# --- X / TWITTER FEED ---
+st.write("### 🐦 Top Tips from X")
 
-# To change this video: Go to any TikTok on your computer, click "Share" -> "Embed" -> "Copy Code", and paste it between the triple quotes below!
-tiktok_embed_code = """
-<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@driving_school_answers/video/7198755018698296619" data-video-id="7198755018698296619" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@driving_school_answers" href="https://www.tiktok.com/@driving_school_answers?refer=embed">@driving_school_answers</a> California DMV test tips! <a target="_blank" title="♬ original sound - Driving School Answers" href="https://www.tiktok.com/music/original-sound-7198755050180414250?refer=embed">♬ original sound - Driving School Answers</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+# Notice how the entire embed code (including the <script> tags) is wrapped in triple quotes
+tweet_code = """
+<blockquote class="twitter-tweet" data-theme="light"><p lang="en" dir="ltr">Top reason people fail their California driving test: Not exaggerating head movements when checking blind spots! The examiner needs to SEE you looking over your shoulder. 👀🚗💨 <a href="https://twitter.com/hashtag/DMVtips?src=hash&amp;ref_src=twsrc%5Etfw">#DMVtips</a></p>&mdash; DMV Prep Bot (@DMVPrepBot) <a href="https://twitter.com/DMVPrepBot/status/1785000000000000000">April 29, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 """
-components.html(tiktok_embed_code, height=600, scrolling=True)
 
+# components.html actually runs the scripts so the visual widget loads
+components.html(tweet_code, height=250, scrolling=True)
 
 st.divider()
 
-st.subheader("🐦 X / Twitter Updates")
-st.write("Quick reminders for the road.")
+# --- TIKTOK FEED ---
+st.write("### 🎵 Trending on TikTok")
+st.write("Watch instructors break down exact intersections in San Diego.")
 
-# To change this tweet: Go to any Tweet on your computer, click "Share" -> "Embed Tweet", and paste it between the triple quotes below!
-tweet_embed_code = """
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Top reason people fail their California driving test: Not exaggerating head movements when checking blind spots! The examiner needs to SEE you looking over your shoulder. Don&#39;t just use your eyes! 👀🚗💨 <a href="https://twitter.com/hashtag/DMVtips?src=hash&amp;ref_src=twsrc%5Etfw">#DMVtips</a> <a href="https://twitter.com/hashtag/California?src=hash&amp;ref_src=twsrc%5Etfw">#California</a></p>&mdash; DMV Prep Bot (@DMVPrepBot) <a href="https://twitter.com/DMVPrepBot/status/1785000000000000000?ref_src=twsrc%5Etfw">April 29, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+tiktok_code = """
+<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@drivingwithmr.c/video/7279313219759574314" data-video-id="7279313219759574314" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@drivingwithmr.c" href="https://www.tiktok.com/@drivingwithmr.c?refer=embed">@drivingwithmr.c</a> <p>California DMV written test questions 🚗</p> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
 """
-components.html(tweet_embed_code, height=450, scrolling=True)
 
-st.info("💡 **Want to add a specific post?** Just grab the 'Embed Code' from any TikTok or Tweet and paste it into the code file for this page!")
+# TikToks need a taller height (around 600px) to show the whole vertical video
+components.html(tiktok_code, height=650, scrolling=True)
+
+st.write("---")
+st.info("💡 **How to add your own:** Go to any TikTok or Tweet, click 'Share', select 'Embed Code', and paste that HTML directly into the code blocks above!")
