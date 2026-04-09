@@ -155,6 +155,54 @@ QUESTION_BANK = [
         "answer": "Pull to the right edge of the road and stop",
         "explanation": "Always pull over to the right and stop to clear the way for emergency vehicles."
     },
+        {
+        "q": "You must dim your high-beam headlights to low beams within:",
+        "options": ["500 feet of a vehicle coming toward you or 300 feet of a vehicle you are following", "300 feet of a vehicle coming toward you or 500 feet of a vehicle you are following", "200 feet of any other vehicle"],
+        "answer": "500 feet of a vehicle coming toward you or 300 feet of a vehicle you are following",
+        "explanation": "To avoid blinding other drivers, dim your lights at 500 feet for oncoming traffic and 300 feet when following."
+    },
+    {
+        "q": "A child must be secured in a child passenger restraint system in the rear seat if they are:",
+        "options": ["Under 8 years old, or under 4 feet 9 inches tall", "Under 6 years old and weighing less than 60 pounds", "Under 10 years old"],
+        "answer": "Under 8 years old, or under 4 feet 9 inches tall",
+        "explanation": "California law requires children under 8 years old or under 4'9\" to be properly secured in a rear seat."
+    },
+    {
+        "q": "When merging onto a freeway, you should be driving:",
+        "options": ["At or near the same speed as the traffic on the freeway", "5 to 10 mph slower than the traffic on the freeway", "The posted speed limit for traffic on the freeway"],
+        "answer": "At or near the same speed as the traffic on the freeway",
+        "explanation": "You should merge safely by matching the speed of the flow of traffic, not entering too slowly."
+    },
+    {
+        "q": "A flashing yellow arrow traffic signal means:",
+        "options": ["You may turn, but you must first yield to oncoming traffic and pedestrians", "You must stop and wait for a green arrow", "You have the right-of-way to turn"],
+        "answer": "You may turn, but you must first yield to oncoming traffic and pedestrians",
+        "explanation": "A flashing yellow arrow allows an 'unprotected' turn. You can go, but only when it is safe and clear."
+    },
+    {
+        "q": "When are roadways the most slippery?",
+        "options": ["During a heavy downpour", "After it has been raining for a few hours", "The first rain after a dry spell"],
+        "answer": "The first rain after a dry spell",
+        "explanation": "The first rain mixes with oil and dust on the road, making it incredibly slick for the first few minutes."
+    },
+    {
+        "q": "If your vehicle starts to hydroplane, you should:",
+        "options": ["Slam on your brakes to slow down quickly", "Slow down gradually and do not apply the brakes", "Steer sharply toward the shoulder of the road"],
+        "answer": "Slow down gradually and do not apply the brakes",
+        "explanation": "Hitting the brakes can cause a skid. Take your foot off the gas and let the vehicle slow down naturally."
+    },
+    {
+        "q": "You want to make a right turn at an upcoming intersection. You should slow down and:",
+        "options": ["Signal for 100 feet before turning", "Signal only if other vehicles are around", "Move into the left side of your lane"],
+        "answer": "Signal for 100 feet before turning",
+        "explanation": "Always signal at least 100 feet before making any turn or lane change."
+    },
+    {
+        "q": "What is the correct hand signal for a left turn?",
+        "options": ["Left arm extended straight out", "Left arm extended upward", "Left arm extended downward"],
+        "answer": "Left arm extended straight out",
+        "explanation": "Straight out means left. Pointing up means right. Pointing down means stop or slow down."
+    },
 ]
 
 NUM_QUESTIONS_PER_TEST = 10 
