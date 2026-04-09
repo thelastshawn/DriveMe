@@ -32,7 +32,7 @@ else:
 st.markdown(theme_css, unsafe_allow_html=True)
 
 # --- HEADER SECTION ---
-st.image("https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=1000&auto=format&fit=crop", use_container_width=True)
+st.image("IMG_6332.png", use_container_width=True)
 st.title("DriveMe 🚗")
 st.subheader("Welcome back, Alyssa! Let's get you that permit. 🌴")
 st.divider()
