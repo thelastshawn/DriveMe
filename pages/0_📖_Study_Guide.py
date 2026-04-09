@@ -29,9 +29,9 @@ st.markdown("""
 * **Hills:** Downhill = wheels toward the curb. Uphill = wheels away from the curb.
 """)
 
-st.header("4. Special Teen Restrictions (Under 18)")
+st.header("4. Adult Permit Rules (18+)")
 st.markdown("""
-* **Curfew:** You may not drive between 11 p.m. and 5 a.m. for the first 12 months.
-* **Passengers:** You cannot transport passengers under 20 years old unless accompanied by a licensed driver 25 or older.
-* **Cell Phones:** Absolute ban on cell phone use (even hands-free) while driving.
+* **No Driver's Ed Required:** As an adult applicant, you do not need to take formal classroom driver's education or behind-the-wheel training to get a permit.
+* **Passenger Rule:** Once you have your permit, you can drive at any time, but you **MUST** have a licensed California driver who is at least 18 years old sitting in the passenger seat at all times.
+* **No Curfews:** Unlike teen drivers, adult permit holders do not have restrictions on driving late at night.
 """)
