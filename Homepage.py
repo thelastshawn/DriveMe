@@ -54,3 +54,4 @@ if test_date:
         st.success("Today is the day! Trust your preparation. You're going to do great! 🚙💨")
     else:
         st.write("Exam day has passed! We hope you're out celebrating your new permit! 🎉")
+
