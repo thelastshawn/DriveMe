@@ -5,22 +5,24 @@ st.write("Sometimes it helps to actually *see* the rules in action. Watch these 
 
 st.divider()
 
-st.subheader("1. The Most Common CA DMV Mistakes")
-st.write("Examiners in California are incredibly strict about these specific habits. Watch out for them!")
-# Streamlit's native video player - loads perfectly on mobile!
-st.video("https://www.youtube.com/watch?v=s1RzIEG5DQQ") 
+st.subheader("1. The CA DMV Written Test (2026)")
+st.write("A full breakdown of the real questions you will see on the test this year.")
+# Live link to a 2026 CA DMV Written Test guide
+st.video("https://www.youtube.com/watch?v=OebXwcsrxsM") 
 
 st.divider()
 
-st.subheader("2. How to Perfectly Check Your Blind Spots")
-st.write("Remember the daily tip: Examiners watch your head, not your eyes!")
-st.video("https://www.youtube.com/watch?v=Fj-E_w2kX3Q")
-
-st.divider()
-
-st.subheader("3. Right-of-Way Rules Explained")
+st.subheader("2. Right-of-Way Rules Explained")
 st.write("A quick visual breakdown of who goes first at 4-way stops and intersections.")
-st.video("https://www.youtube.com/watch?v=eJt3k1F9n0M")
+# Live link to Right-of-Way intersection rules
+st.video("https://www.youtube.com/watch?v=Uws01yip3WM")
+
+st.divider()
+
+st.subheader("3. 2-Way Stop Intersections")
+st.write("One of the most confusing parts of driving—who goes first when only two sides have stop signs?")
+# Live link to 2-Way Stop Right-of-Way rules
+st.video("https://www.youtube.com/watch?v=7MODqVaQVuY")
 
 st.divider()
 
