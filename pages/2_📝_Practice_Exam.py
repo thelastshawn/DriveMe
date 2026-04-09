@@ -17,6 +17,66 @@ QUESTION_BANK = [
         "answer": "Sell or transfer your vehicle",
         "explanation": "CA law requires a Notice of Transfer and Release of Liability within 5 days of a sale."
     },
+        {
+        "q": "You are driving on a freeway posted for 65 mph. The traffic is traveling at 70 mph. You may legally drive:",
+        "options": ["70 mph or faster to keep up with the speed of traffic", "Between 65 mph and 70 mph", "No faster than 65 mph"],
+        "answer": "No faster than 65 mph",
+        "explanation": "You may never legally drive faster than the posted speed limit, regardless of how fast other traffic is moving."
+    },
+    {
+        "q": "A white painted curb means:",
+        "options": ["Loading zone for freight or passengers", "Loading zone for passengers or mail only", "Parking for vehicles with disabled placards"],
+        "answer": "Loading zone for passengers or mail only",
+        "explanation": "White curbs are strictly for quick passenger drop-offs/pick-ups or depositing mail."
+    },
+    {
+        "q": "When can you drive in a bike lane?",
+        "options": ["During rush hour traffic if there are no bicyclists", "When you are within 200 feet of a cross street where you plan to turn right", "Whenever you need to pass a slower vehicle on the right"],
+        "answer": "When you are within 200 feet of a cross street where you plan to turn right",
+        "explanation": "You must enter the bike lane no more than 200 feet before the corner to make a right turn."
+    },
+    {
+        "q": "Which of these vehicles must always stop before crossing railroad tracks?",
+        "options": ["Tank trucks marked with hazardous materials placards", "Motor homes or pickup trucks towing a boat trailer", "Any vehicle with 3 or more axles or weighing more than 4,000 pounds"],
+        "answer": "Tank trucks marked with hazardous materials placards",
+        "explanation": "Vehicles carrying hazardous materials, as well as most buses, must stop before crossing."
+    },
+    {
+        "q": "California's 'Basic Speed Law' says:",
+        "options": ["You should never drive faster than posted speed limits", "You should never drive faster than is safe for current conditions", "The maximum speed limit in California is 70 mph on certain freeways"],
+        "answer": "You should never drive faster than is safe for current conditions",
+        "explanation": "Even if the limit is 65 mph, if it is raining or foggy, you must slow down to a safe speed."
+    },
+    {
+        "q": "You must turn on your headlights:",
+        "options": ["Whenever you use your windshield wipers in bad weather", "Half an hour after sunset to half an hour before sunrise", "Both of the above"],
+        "answer": "Both of the above",
+        "explanation": "Headlights are required in darkness and whenever weather requires the continuous use of wipers."
+    },
+    {
+        "q": "If you have a green light, but traffic is blocking the intersection, you should:",
+        "options": ["Stay out of the intersection until traffic clears", "Enter the intersection and wait until traffic clears", "Merge into another lane and try to go around the traffic"],
+        "answer": "Stay out of the intersection until traffic clears",
+        "explanation": "It is illegal to block an intersection. Wait until there is enough space for your vehicle on the other side."
+    },
+    {
+        "q": "A flashing yellow traffic signal at an intersection means:",
+        "options": ["Stop. Yield to all cross traffic before crossing", "Slow down and be alert at the upcoming intersection", "The traffic signal is broken; treat it as a four-way stop"],
+        "answer": "Slow down and be alert at the upcoming intersection",
+        "explanation": "A flashing yellow light means 'PROCEED WITH CAUTION'. You do not need to stop, but you must slow down."
+    },
+    {
+        "q": "It is illegal to leave a child age six or younger unattended in a vehicle on a hot day:",
+        "options": ["Even if they are secured in a child passenger restraint system", "If they are accompanied by a person 12 years of age or older", "Only if the windows are rolled up"],
+        "answer": "Even if they are secured in a child passenger restraint system",
+        "explanation": "It is illegal to leave a child 6 or younger unattended. They must be supervised by someone at least 12 years old."
+    },
+    {
+        "q": "Fines in a highway construction or maintenance zone are:",
+        "options": ["Tripled", "Doubled", "The same as any other fine"],
+        "answer": "Doubled",
+        "explanation": "Traffic violation fines can be $1,000 or more and are doubled in highway work zones."
+    },
     {
         "q": "It is illegal for a person 21 years of age or older to drive with a BAC that is:",
         "options": ["0.08% or higher", "0.04% or higher", "0.01% or higher"],
@@ -94,7 +154,7 @@ QUESTION_BANK = [
         "options": ["Speed up to get out of the way", "Pull to the right edge of the road and stop", "Stop immediately in your lane"],
         "answer": "Pull to the right edge of the road and stop",
         "explanation": "Always pull over to the right and stop to clear the way for emergency vehicles."
-    }
+    },
 ]
 
 NUM_QUESTIONS_PER_TEST = 10 
